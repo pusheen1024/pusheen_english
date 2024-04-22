@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Заполните кроссвод и укажите ключевое слово.</h2>
+<canvas id="canvas" width={{ width }} height={{ height }}></canvas>
+<script src="static/script/draw_on_canvas.js"></script>
+{% for def in definitions %}
+    <h3>{{ loop.index }}) Synonyms: {{ def }}.</h3>
+{% endfor %}
+<form action="" method="post" novalidate>
+    {{ form.hidden_tag() }}
+    <p>
+	{{ form.control_word.label }}
+        {{ form.control_word(class="form-control") }}
+        {% for error in form.control_word.errors %}
+    	    <div class="alert alert-danger" role="alert">
+                {{ error }}
+            </div>
+    	{% endfor %}
+    </p>
+    <p>{{ form.submit(type="submit", class="btn btn-primary") }}</p>
+</form>
+{% endblock %}

@@ -1,0 +1,8 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>На каком из этих фрагментов карты изображён {{ corr_toponym }}?</h2><br>
+{% for id, file in filenames %}
+     <a href="/choose/{{ corr_id }}/{{  id }}"><img src="{{ url_for("static", filename=file) }}" width="400" class="map"></a>
+{% endfor %}
+{% endblock %}

@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div align="center">
+    <h1> {{ current_user.name }} {{ current_user.surname }}
+    <a class="btn btn-danger" href="/logout">Выйти из аккаунта</a></h1>
+    <img src="static/img/pusheen_avatar.png" height="300" alt="avatar"><br>
+    <h3>Возраст: {{ current_user.age }} лет</h3><br>
+    <div class="points">
+        <h2>Points: {{ success }}</h2>
+        <h2>Success rate: {{ success_rate }} %</h2>
+    </div>
+</div>
+{% endblock %}

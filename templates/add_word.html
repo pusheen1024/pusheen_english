@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block content %}
+<form action="" method="post" novalidate>
+    {{ form.hidden_tag() }}
+    <p>
+	{{ form.part_of_speech.label }}
+        {{ form.part_of_speech(class="form-control") }}
+    </p>
+    <p>
+	{{ form.word.label }}
+        {{ form.word(class="form-control") }}
+        {% for error in form.word.errors %}
+    	    <div class="alert alert-danger" role="alert">
+                {{ error }}
+            </div>
+    	{% endfor %}
+    </p>
+    <p>{{ form.submit(type="submit", class="btn btn-primary") }}
+    <a class="btn btn-secondary" href="/my_profile">Назад в профиль</a></p>
+</form>
+{% if message %}
+     <div class="alert alert-danger">{{ message }}</div>
+{% endif %}
+{% endblock %}

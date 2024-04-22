@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div align="center">
+     <h1>{{ message }}</h1>
+     {% if result %}
+         <img src={{ url_for("static", filename="img/right.png") }} class="result" height="450" alt="Right">
+     {% else %}
+         <img src={{ url_for("static", filename="img/wrong.png") }} class="result" height="450" alt="Wrong">
+     {% endif %}
+         <a href={{ href }}><img src={{ url_for("static", filename="img/restart.png") }} height="300" alt="Restart"></a>
+</div>
+{% endblock %}

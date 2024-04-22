@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div align="center">
+<h1>Добро пожаловать на сайт "English with Pusheen"!</h1>
+<h3>Здесь Вы сможете улучшить свои знания английского, подготовиться к экзаменам и олимпиадам и просто хорошо провести время!</h3>
+<img src="static/img/pusheen_home.png" height="600px">
+</div>
+{% if current_user.is_authenticated %}
+<footer class="fixed-bottom">
+    <div align="center">
+        <h3 class="bg-light">Бот Pusheen уже ждёт Вас в <a href="https://t.me/pusheen_english_bot">Telegram</a> :3</h3>
+    </div>
+</footer>
+{% endif %}
+{% endblock %}

@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div>
+    <h1 class="word">{{ word }}</h1>
+    <h3 class="pronunciation">Pronunciation: [{{ pronunciation }}]</h3>
+    <h4 class="learn-more"><a href={{ href }}>Click to learn more about this word!</a></h4>
+    {% if current_user.is_authenticated and current_user.id == 1 %}
+        <a class="btn btn-warning add-word" href="/add_word">Добавить слово!</a>
+    {% endif %}
+</div>
+{% endblock %}

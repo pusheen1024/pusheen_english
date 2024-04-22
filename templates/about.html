@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div>
+    <h2>Веб-сайт <i>"English with Pusheen"</i> и бот <i>Pusheen</i> созданы в рамках проекта для Яндекс Лицея с использованием таких технологий, как:</h2>
+    <ul>
+        <li>Flask
+            <ul>
+                <li>Flask-wtf</li>
+                <li>Flask-login</li>
+                <li>Flask-restful</li>
+                <li>SQL Alchemy</li>
+                <li>Werkzeug</li>
+            </ul>
+        </li>
+        <li>Pillow</li>
+        <li>API Яндекс Карт</li>
+        <li>API Яндекс Словаря</li>
+        <li>API Reverso Context</li>
+        <li>Python-telegram-bot</li>
+    </ul>
+    <h5>Исходный код сайта - <a href="https://github.com/pusheen1024/pusheen_english">https://github.com/pusheen1024/pusheen_english</a></h5>
+    <h5>Исходный код бота - <a href="https://github.com/pusheen1024/pusheen_english">https://github.com/pusheen1024/pusheen_english</a></h5>
+</div>
+{% if current_user.is_authenticated %}
+    <footer class="fixed-bottom">
+        <div align="center">
+            <h3 class="bg-light">Бот Pusheen уже ждёт Вас в <a href="https://t.me/pusheen_english_bot">Telegram</a> :3</h3>
+        </div>
+    </footer>
+{% endif %}
+{% endblock %}
