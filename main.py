@@ -18,10 +18,10 @@ from add_word_form import AddWordForm
 from login_form import LoginForm, RegistrationForm
 from maps_api import MapsAPI
 from words_api import WordsAPI
+from congig import SECRET_KEY
 
 app = Flask(__name__)
-app.config['SECRET_KEY'] = 'yandexlyceum_project_secret_key'
-
+app.config['SECRET_KEY'] = SECRET_KEY
 login_manager = LoginManager()
 login_manager.init_app(app)
 
