@@ -236,7 +236,7 @@ def choose(id, corr_id):
 def random_word():
     word = words_api.get_word()
     entry = words_api.get_entry(word)
-    params = {'title': 'Слоучайное слово',
+    params = {'title': 'Случайное слово',
               'word': word,
               'href': f'https://dictionary.cambridge.org/dictionary/english/{word}'}
     try:
