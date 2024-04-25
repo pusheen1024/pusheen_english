@@ -18,7 +18,7 @@ from add_word_form import AddWordForm
 from login_form import LoginForm, RegistrationForm
 from maps_api import MapsAPI
 from words_api import WordsAPI
-from congig import SECRET_KEY
+from config import SECRET_KEY
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = SECRET_KEY
