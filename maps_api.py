@@ -1,4 +1,5 @@
 import random
+
 import requests
 
 from config import YANDEX_MAPS
